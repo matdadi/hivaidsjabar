@@ -1,0 +1,11 @@
+matplotlib
+streamlit
+numpy
+pandas
+seaborn
+streamlit_lottie
+requests
+geopandas
+altair
+plotly
+streamlit_option_menu
