@@ -26,7 +26,7 @@ def load_home(data, penduduk, maps):
                 <!--upper-->
                 <div style='''+get_css('upper_right_wrap_style')+'''>
                     <a style='''+get_css('text_up_right1')+'''>HIV/AIDS</a>
-                    <a style='''+get_css('text_up_right2')+rf'''>Provinsi Jawa Barat</a>
+                    <a style='''+get_css('text_up_right2')+rf'''>Prov. Jawa Barat 2019</a>
                 </div>
 
                 <!--bottom-->
