@@ -64,7 +64,7 @@ if navigation()==load_master('menu')[0]:
     home.load_home(get_data(), get_penduduk(), get_maps())
 
 if navigation()==load_master('menu')[1]:
-    detail.load_detail(get_data(), get_penduduk(), )
+    detail.load_detail(get_data(), get_penduduk())
 
 if navigation()==load_master('menu')[2]:
     pagedata.load_pagedata(get_data(), get_penduduk())
