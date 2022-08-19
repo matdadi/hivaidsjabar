@@ -57,18 +57,24 @@ st_lottie(get_animate, speed=1, height=100, key='initial')
 
 # ------------------------------------------
 
-#container menu
-menu.load_menu()
 
 if st.experimental_get_query_params()['p'][0]==load_master('menu')[0]:
+    #container menu
+    menu.load_menu()
     home.load_home(get_data(), get_penduduk(), get_maps())
 
 elif st.experimental_get_query_params()['p'][0]==load_master('menu')[1]:
+    #container menu
+    menu.load_menu()
     detail.load_detail(get_data(), get_penduduk())
 
 elif st.experimental_get_query_params()['p'][0]==load_master('menu')[2]:
+    #container menu
+    menu.load_menu()
     pagedata.load_pagedata(get_data(), get_penduduk())
     
 else:
     st.experimental_set_query_params(p=load_master('menu')[0])
+    #container menu
+    menu.load_menu()
     home.load_home(get_data(), get_penduduk(), get_maps())
