@@ -56,9 +56,11 @@ get_animate = load_json('animasi')
 st_lottie(get_animate, speed=1, height=100, key='initial')
 
 # ------------------------------------------
+if st.experimental_get_query_params()['p'][0]==''
+    st.markdown('''<meta http-equiv="refresh" content="delay_time; URL=https://matdadi-hivaidsjabar-hivjabar-6g57cz.streamlitapp.com/?p='''+
+                load_master('menu')[1]+'''" />''', unsafe_allow_html=True)
 
-
-if st.experimental_get_query_params()['p'][0]==load_master('menu')[0]:
+elif st.experimental_get_query_params()['p'][0]==load_master('menu')[0]:
     #container menu
     menu.load_menu()
     home.load_home(get_data(), get_penduduk(), get_maps())
@@ -73,8 +75,8 @@ elif st.experimental_get_query_params()['p'][0]==load_master('menu')[2]:
     menu.load_menu()
     pagedata.load_pagedata(get_data(), get_penduduk())
     
-else:
-    st.experimental_set_query_params(p=load_master('menu')[0])
-    #container menu
-    menu.load_menu()
-    home.load_home(get_data(), get_penduduk(), get_maps())
+# else:
+#     st.experimental_set_query_params(p=load_master('menu')[0])
+#     #container menu
+#     menu.load_menu()
+#     home.load_home(get_data(), get_penduduk(), get_maps())
