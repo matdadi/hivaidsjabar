@@ -14,11 +14,11 @@ def load_menu():
         get_css('menu_style')
     ]
 
-    if navigation()==load_master('menu')[0]:
+    if st.experimental_get_query_params()['p'][0]==load_master('menu')[0]:
         selected_style[0]=get_css('menu_select_style')
-    elif navigation()==load_master('menu')[1]:
+    elif st.experimental_get_query_params()['p'][0]==load_master('menu')[1]:
         selected_style[1]=get_css('menu_select_style')
-    elif navigation()==load_master('menu')[2]:
+    elif st.experimental_get_query_params()['p'][0]==load_master('menu')[2]:
         selected_style[2]=get_css('menu_select_style')
     else: None
 
