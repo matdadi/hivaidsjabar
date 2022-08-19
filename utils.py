@@ -110,12 +110,16 @@ def load_master(key):
     return dict_master[key]
 
 def navigation():
-    try:
-        path = st.experimental_get_query_params()['p'][0]
-    except Exception as e:
-        st.experimental_set_query_params(p=load_master('menu')[0])
+        if st.experimental_get_query_params()['p'][0]=='':
+                st.experimental_set_query_params(p=load_master('menu')[0])
         return st.experimental_get_query_params()['p'][0]
-    return path
+                
+#     try:
+#         path = st.experimental_get_query_params()['p'][0]
+#     except Exception as e:
+#         st.experimental_set_query_params(p=load_master('menu')[0])
+#         return st.experimental_get_query_params()['p'][0]
+#     return path
 
 def grup_by_gender(data, key):
     grup = data.copy(deep=True)
