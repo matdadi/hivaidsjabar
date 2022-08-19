@@ -60,11 +60,14 @@ st_lottie(get_animate, speed=1, height=100, key='initial')
 #container menu
 menu.load_menu()
 
-if navigation()==load_master('menu')[0]:
+if st.experimental_get_query_params()['p'][0]==load_master('menu')[0]:
     home.load_home(get_data(), get_penduduk(), get_maps())
 
-if navigation()==load_master('menu')[1]:
+elif st.experimental_get_query_params()['p'][0]==load_master('menu')[1]:
     detail.load_detail(get_data(), get_penduduk())
 
-if navigation()==load_master('menu')[2]:
+elif st.experimental_get_query_params()['p'][0]==load_master('menu')[2]:
     pagedata.load_pagedata(get_data(), get_penduduk())
+    
+else:
+    home.load_home(get_data(), get_penduduk(), get_maps())
