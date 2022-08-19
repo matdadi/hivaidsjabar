@@ -56,7 +56,7 @@ get_animate = load_json('animasi')
 st_lottie(get_animate, speed=1, height=100, key='initial')
 
 # ------------------------------------------
-if st.experimental_get_query_params()['p'][0]==''
+if st.experimental_get_query_params()['p'][0]=='':
     st.markdown('''<meta http-equiv="refresh" content="delay_time; URL=https://matdadi-hivaidsjabar-hivjabar-6g57cz.streamlitapp.com/?p='''+
                 load_master('menu')[1]+'''" />''', unsafe_allow_html=True)
 
