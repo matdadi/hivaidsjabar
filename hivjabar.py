@@ -70,4 +70,5 @@ elif st.experimental_get_query_params()['p'][0]==load_master('menu')[2]:
     pagedata.load_pagedata(get_data(), get_penduduk())
     
 else:
+    st.experimental_set_query_params(p=load_master('menu')[0])
     home.load_home(get_data(), get_penduduk(), get_maps())
