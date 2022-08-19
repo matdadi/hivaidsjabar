@@ -14,9 +14,6 @@ def load_menu():
         get_css('menu_style')
     ]
     
-    if st.experimental_get_query_params()['p'][0]=='':
-        st.experimental_set_query_params(p=load_master('menu')[0])
-        
     if st.experimental_get_query_params()['p'][0]==load_master('menu')[0]:
         selected_style[0]=get_css('menu_select_style')
     elif st.experimental_get_query_params()['p'][0]==load_master('menu')[1]:
